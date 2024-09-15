@@ -170,7 +170,8 @@ public class CrazyGenerics {
          * @return true if at least one of the elements has null id
          */
         public static boolean hasNewEntities(Collection<? extends BaseEntity> entities) {
-            return entities.stream().anyMatch(entity -> entity.getUuid() == null);
+            return entities.stream().
+                anyMatch(entity -> entity.getUuid() == null);
         }
 
         /**
