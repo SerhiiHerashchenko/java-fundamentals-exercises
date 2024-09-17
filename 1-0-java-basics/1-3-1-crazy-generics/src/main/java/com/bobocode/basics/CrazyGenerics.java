@@ -1,7 +1,6 @@
 package com.bobocode.basics;
 
 import com.bobocode.basics.util.BaseEntity;
-import com.bobocode.util.ExerciseNotCompletedException;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,8 +10,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Predicate;
-
-import org.apache.commons.math3.analysis.function.Max;
 
 /**
  * {@link CrazyGenerics} is an exercise class. It consists of classes, interfaces and methods that should be updated
