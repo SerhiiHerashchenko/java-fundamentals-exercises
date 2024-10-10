@@ -195,8 +195,9 @@ public class CrazyGenerics {
          * @return true if entities list contains target entity more than once
          */
         public static <T extends BaseEntity> boolean hasDuplicates(Collection<T> entities, T targetEntity) {
-            return entities.stream().filter(element -> element.getUuid()
-                .equals(targetEntity.getUuid())).count() > 1;
+            long count = entities.stream().parallel().filter(element -> element.getUuid()
+                .equals(targetEntity.getUuid())).count();
+            return count > 1;
         }
 
         /**
